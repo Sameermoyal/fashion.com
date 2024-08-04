@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         *{
+       
+        padding: 0px;
+        margin:0px;
+        box-sizing: border-box;
+        
+        
+        
+    }
+    body, html {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+    .navbar{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: rgb(19, 17, 5);
+        height: 60px;
+        
+
+    }
+
+    .navbar > div ,a{
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        color: aqua;
+
+    }
+
+    .navbar>div >h1{
+        font-size: 30px solid  aquamarine;
+    }
+    @media only screen and (max-width: 768px){
+
+    }
+    .footer{
+        display: flex;
+        background-color:rgba(179, 241, 245, 0.514);
+        height: 200px;
+       
+        position: relative;
+        bottom: 0;
+        width: 100%;
+
+    }
+    .footer>div{
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        
+    font-size: 20px solid black;
+    }
+
+    
+   
+   .footer a{
+      color: rgb(30, 162, 210);
+      font-size: 25px;
+      font-weight: 800;
+      text-decoration: dotted;
+    }
+    a{
+            text-decoration: none;
+        }
+
+        .main{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: start;
+            padding: 40px;
+            flex-grow: 1;
+
+
+        }
+
+        button{
+            height: 30px;
+            background-color: brown;
+            color: white;
+            border-radius: 4px;
+            width: 100px;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <div class="container">
+          
+ 
+        <div class="navbar">
+            <div><h1>FASHIONS.com</h1></div>
+            <div class="home"> <a href="./index.html">HOME</a></div>
+            <div class="men"> <a href="./men.html">MEN's</a>  </div>
+            <div class="women"><a href="./women.html">WOMEN's</a></div>
+            <div class="child"><a href="./child.html">CHILD</a></div>
+            <div class="cart"><a href="./cart.html">CART</a></div>
+            <div class="buy"><a href="./buy.html" >BUY </a></div>
+        </div>
+
+         <div class="main">
+            <h1>ABOUT</h1>
+            <h3>FASHION.com is best collection of cloths and fashion</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus voluptate iusto incidunt consequuntur, qui eos at placeat expedita perspiciatis veniam amet debitis modi, accusantium ut molestiae fugiat mollitia possimus ea quasi temporibus suscipit nisi omnis hic dolore! Ipsam est minima corrupti rerum error, esse saepe quo, sapiente distinctio praesentium modi, sequi doloremque numquam beatae tempore dolores.</p>
+            
+            <div id="cart-items"></div>
+            
+         </div>
+    
+
+
+  <div class="footer">
+    <div class="home"> <a href="./index.html">HOME</a></div>
+                
+    <div class="cart"><a href="./cart.html">CART</a></div>
+    <div class="buy"><a href="./buy.html">BUY</a></div>
+    <div class="about"><a href="./about.html">ABOUT</a></div>
+    <div class="contact"><a href="./contact.html">CONTACT</a></div>
+</div>
+    
+</div>
+
+
+  
+
+
+
+
+</body>
+</html>
