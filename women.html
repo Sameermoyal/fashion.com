@@ -120,7 +120,7 @@
         <div class="mens">
             <div class="card">
               <img src="./women/w10.png" alt="">
-              <h2>T-SHIRT SIMPLE LOOK</h2>
+              <h2>kurta SIMPLE LOOK</h2>
               
               <h4>PRICE : $<SPAN>200</SPAN></h4>
               <button class="add">Add</button>
@@ -216,32 +216,32 @@
 
 
 
-
 <script>
-  const cart = [];
-  
-  let addbuttons=document.getElementsByClassName('card');
-  for(let button of addbuttons){
-      button.addEventListener('click',(event)=>{
-        const clickedBtn=event.target;
-        // console.log(clickedBtn)
+  let cart=[];
+  let addButtons=document.getElementsByClassName('add');
 
-       let card= clickedBtn.closest('.card');
-       //console.log(card);
-        
-       let cardData={
-        title:card.querySelector('h2').innerText,
-        price:card.querySelector('h4 span').innerText,
-        imageSrc: card.querySelector('img').src,
+  for(let btn of addButtons){
+    btn.addEventListener('click',(e)=>{
+    let div=e.target;
+    let s=div.parentElement;
+    //console.log(s)
+    let dataObj ={
+      title:s.querySelector('h2').innerText,
+      imageSrc:s.querySelector('img').src,
+      price:s.querySelector('h4 span').innerText,
+    }
+    let preData=JSON.parse(localStorage.getItem('cart')) || [];
+    cart=[...preData]
+    cart.push(dataObj);
+    localStorage.setItem('cart',JSON.stringify(cart));
+    
 
-       }
 
-       console.log(cardData)
-       cart.push(cardData)
-       localStorage.setItem('cart',JSON.stringify(cart));
-
-      })
+  })
   }
+ 
+  
+ 
 </script>
 
 

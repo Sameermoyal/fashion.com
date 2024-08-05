@@ -218,7 +218,7 @@
 
 
 <script>
-  const cart=[];
+  let cart=[];
  const addButtons = document.getElementsByClassName('add');
  for(let button of addButtons){
   button.addEventListener('click',(e)=>{
@@ -232,10 +232,11 @@
                     imageSrc: card.querySelector('img').src,
                 };
     //console.log(cardData);
+    let preData=JSON.parse(localStorage.getItem('cart')) || [];
+    cart=[...preData]
     cart.push(cardData);
-   
     localStorage.setItem('cart',JSON.stringify(cart));
-  })
+     })
  }
 
 </script>

@@ -216,7 +216,7 @@
 
 
 <script>
-   const cart=[];
+   let cart=[];
    let addButtons=document.getElementsByClassName('add');
    for(let btn of addButtons){
     btn.addEventListener('click',(e)=>{
@@ -228,7 +228,9 @@
         price:card.querySelector('h4 span').innerText,
         imageSrc:card.querySelector('img').src,
       }
-      console.log(cardData);
+      //console.log(cardData);
+      let preData=JSON.parse(localStorage.getItem('cart')) || [];
+     cart=[...preData]
       cart.push(cardData);
       localStorage.setItem('cart',JSON.stringify(cart));
     })
